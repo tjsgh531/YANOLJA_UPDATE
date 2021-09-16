@@ -1,0 +1,132 @@
+:root{
+    --background-zindex : -100;
+    --nav-zindex : 100;
+    --nav-background-zindex : 90;
+    --normal-zindex:0;
+}
+html,body{
+    padding: 0;
+    margin: 0;
+
+}
+.video{
+    position:absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    overflow: hidden;
+
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    z-index: var(--background-zindex);
+
+
+}
+.BGVideo{
+    position:fixed;
+    top: 0px; left: 0;
+    
+    transform: scale(1.5,1.5);
+
+    z-index: var(--background-zindex);
+}
+
+
+.nav{
+    position: sticky;
+    top: 0; left:0;
+
+    border: 1px solid red;
+    padding: 30px;;
+
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'Comfortaa',sans-serif, cursive;
+    letter-spacing: 0px;
+    color :white;
+
+    z-index: var(--nav-zindex);
+}
+.nav *{
+
+    z-index: var(--nav-zindex);
+
+}
+.navBackground{
+    position: absolute;
+    top: 0;left: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 0;
+
+    background-color: white;
+
+    transition: height 0.3s ease-out ;
+
+    z-index: var(--nav-background-zindex);
+}
+.logo{
+
+    margin: 0 36px 0 60px;
+
+    letter-spacing: -1px;
+    color: rgb(255, 52, 120);
+    font-size: 24px;;
+    font-weight: 900;
+}
+.menu{
+    border: 1px solid red;
+    
+    flex-shrink: 1;
+
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-evenly;
+}
+.lang{
+    position: absolute;
+    right: 48px;
+    width: 100px;
+
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+}
+.lang div{
+    padding: 0 8px;
+}
+.lang .en{
+    color: rgb(151, 151, 151);
+    box-sizing: border-box;
+    border-left: solid 3px rgb(151, 151, 151);
+}
+
+.submenu{
+    position:absolute;
+    margin-top: 4px;
+    
+    white-space: nowrap;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.submenu .submenubtn{
+    position: relative;
+    margin: 14px 0;
+}
+.submenu .submenubtn:hover{
+
+    left: 5px;
+    color: black;
+
+}
+.disappear{
+    display: none;
+}
+.hide{
+    visibility: hidden;
+}
